@@ -1,0 +1,10 @@
+version: "3"
+services:
+  frontend:
+    image: shahedmehbub/feb-23-cicd-frontend:latest
+    ports:
+      - "8080:80"
+    depends_on:
+      - python-backend-service
+  python-backend-service:
+    image: shahedmehbub/feb-23-cicd-backend:latest
